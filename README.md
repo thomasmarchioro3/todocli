@@ -4,8 +4,6 @@ Minimal TO-DO list CLI written in Python (using only the standard library).
 
 ## Installation
 
-Currently the 
-
 Linux:
 - Install Python >= [3.10](https://www.python.org/downloads/release/python-3100/)
 - Clone the repository
