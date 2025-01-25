@@ -71,7 +71,7 @@ def save_data(data: list, data_file: str):
     The file should be in a CSV format with four columns: content, priority,
     deadline and status. The priority column should contain a number, with 0
     corresponding to high, 1 to medium, and 2 to low. The deadline should be
-    in the ISO 8601 format, YYYY-MM-DD. The status column should be either
+    in the [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format, YYYY-MM-DD. The status column should be either
     "todo" or "done".
 
     Args:

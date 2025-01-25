@@ -1,6 +1,6 @@
 import datetime
 
-UNSPECIFIED_DEADLINE = "unspecified"
+UNSPECIFIED_DEADLINE = "-"
 
 WEEKDAY_NAMES = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
 

@@ -19,12 +19,9 @@ def add_entry(data: list):
     deadline = None
 
     while deadline is None:
-        deadline = input("Deadline [blank for no deadline]: ")
+        deadline = input("Deadline [YYYY-MM-DD or weekday, blank for no deadline]: ")
 
-        if deadline == "":
-            deadline = "-"
-        else:
-            deadline = parse_input_deadline(deadline)
+        deadline = parse_input_deadline(deadline)
 
         if deadline is None:
             print("Invalid deadline format. Please use YYYY-MM-DD or a weekday (e.g., monday).")
