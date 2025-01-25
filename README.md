@@ -18,12 +18,12 @@ NOTE: You may need to run `chmod +x setup.sh` first
 After installation, run `todocli`
 
 ```
-index  |content    |priority  |deadline             |status  
--------+-----------+----------+---------------------+--------
-001    |Get a job  |low       |-                    |todo    
-002    |Learn C    |high      |2025-01-13 (Monday)  |todo    
-003    |Laundry    |medium    |2025-01-13 (Monday)  |todo    
--------+-----------+----------+---------------------+--------
+index  |content    |priority  |deadlin           |status  
+-------+-----------+----------+------------------+--------
+001    |Get a job  |low       |-                 |todo    
+002    |Learn C    |high      |2025-01-13 (Mon)  |todo    
+003    |Laundry    |medium    |2025-01-13 (Mon)  |todo    
+-------+-----------+----------+------------------+--------
 ```
 
 ## Usage
