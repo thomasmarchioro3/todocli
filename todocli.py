@@ -4,7 +4,7 @@ import os
 
 from src.storage import load_data, save_data
 from src.display import display_data
-from src.option import add_entry, remove_entry
+from src.option import add_entry, remove_entry, edit_entry
 
 DEFAULT_DATA_FILE = ".data/default.csv"
 DEFAULT_DATA_FILE = os.path.join(os.path.dirname(os.path.realpath(__file__)), DEFAULT_DATA_FILE)
@@ -15,7 +15,7 @@ if __name__ == '__main__':
 
     parser = argparse.ArgumentParser()
 
-    parser.add_argument('option', nargs='?', type=str, help="NULL | add | remove")
+    parser.add_argument('option', nargs='?', type=str, help="NULL | add | remove | edit")
     parser.add_argument('args', nargs='?', type=str, help="additional arguments (e.g. index to remove)") 
 
     # parser.add_argument('--data-file', type=str, default=DEFAULT_DATA_FILE, help="path to data file")
@@ -39,10 +39,17 @@ if __name__ == '__main__':
         save_data(data, data_file)
         exit(0)
 
+    if option in ("remove", "edit"):
+        if args.args is None:
+            args.args = input(f"Enter index to {option}: ")     
+
+        
     if option == "add":
         data = add_entry(data)
     elif option == "remove":
         data = remove_entry(data, index=args.args)
+    elif option == "edit":
+        data = edit_entry(data, index=args.args)
 
     else:
         # print help

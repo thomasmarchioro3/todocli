@@ -54,6 +54,12 @@ The deadline can be specified either using the format YYYY-mm-dd or by specifyin
 todocli remove <ENTRY INDEX>
 ```
 
+- Edit an entry:
+
+```bash
+todocli edit <ENTRY INDEX>
+```
+
 
 ## Planned features
 

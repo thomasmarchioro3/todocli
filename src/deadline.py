@@ -11,7 +11,7 @@ def get_display_deadline(deadline: str):
 
     The function expects the deadline in the format 'YYYY-MM-DD'. It returns
     the date in the same format along with the weekday in parentheses, e.g.,
-    '2025-01-01 (Wednesday)'.
+    '2025-01-01 (Wed)'.
 
     Args:
         deadline: A string representing the deadline date in 'YYYY-MM-DD' format
@@ -28,7 +28,7 @@ def get_display_deadline(deadline: str):
     try:
         deadline = datetime.datetime.strptime(deadline, "%Y-%m-%d").date()
         weekday = deadline.weekday()
-        return f"{deadline.strftime('%Y-%m-%d')} ({WEEKDAY_NAMES[weekday]})"
+        return f"{deadline.strftime('%Y-%m-%d')} ({WEEKDAY_NAMES[weekday][:3]})"
 
     except ValueError:
         return "error"

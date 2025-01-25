@@ -55,9 +55,9 @@ def load_data(data_file: str, sortby: Literal["priority", "deadline"]=None):
         {
             "index": f"{i + 1:03d}",
             "content": entry["content"],
-            "priority": entry["priority"],
+            "priority": int(entry["priority"]),
             "deadline": entry["deadline"],
-            "status": entry["status"]
+            "status": int(entry["status"])
         } for i, entry in enumerate(data)
     ]
 

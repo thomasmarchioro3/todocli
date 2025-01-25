@@ -1,11 +1,9 @@
 PRIORITY_LEVELS = ["low", "medium", "high"]
+PRIORITY_RANGE = list(range(len(PRIORITY_LEVELS)))
 
-def num2priority(priority: str):
+def num2priority(priority: int):
 
-    assert priority.isnumeric()
-    priority = int(priority)
-
-    assert priority in range(len(PRIORITY_LEVELS))
+    assert priority in PRIORITY_RANGE
 
     return PRIORITY_LEVELS[priority]
 
