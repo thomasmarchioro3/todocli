@@ -1,6 +1,8 @@
 PRIORITY_LEVELS = ["low", "medium", "high"]
 PRIORITY_RANGE = list(range(len(PRIORITY_LEVELS)))
 
+# TODO replace with enum (from enum import Enum, class Priority(Enum):)
+
 def num2priority(priority: int):
 
     assert priority in PRIORITY_RANGE

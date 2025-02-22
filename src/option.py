@@ -46,7 +46,7 @@ def edit_entry(data: list, index: str):
     curr_priority = data[index]["priority"]
     curr_deadline = data[index]["deadline"]
 
-    content = input("Content [curreent if blank]: ")
+    content = input("Content [blank for current]: ")
     if content == "":
         content = curr_content
 
